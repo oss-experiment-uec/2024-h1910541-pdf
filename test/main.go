@@ -3,16 +3,26 @@ package main
 import (
 	"bytes"
 	"fmt"
+        "os"
 
-	"github.com/ledongthuc/pdf"
+	"github.com/oss-experiment-uec/2024-h1910541-pdf"
 )
 
 func main() {
 	// pdf.DebugOn = true //
-	content, err := readPdf("sample2.pdf") // Read local pdf file
-	if err != nil {
-		panic(err)
+	if len(os.Args) < 2 {
+		fmt.Println("Usage: go run main.go <pdf-path>")
+		os.Exit(1)
 	}
+
+	pdfPath := os.Args[1]
+
+	content, err := readPdf(pdfPath)
+	if err != nil {
+		fmt.Printf("Error reading PDF: %v\n", err)
+		os.Exit(1)
+	}
+
 	fmt.Println(content)
         wordCount := pdf.CountWords(content)
         fmt.Printf("The PDF contains %d words.\n", wordCount)

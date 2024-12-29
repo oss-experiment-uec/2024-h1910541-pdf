@@ -1,1 +1,0 @@
-Hello, this is a test. The number of words is 11.
