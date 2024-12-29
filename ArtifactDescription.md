@@ -22,7 +22,7 @@
 
 ```
 docker pull h1910541/2024-h1910541-pdf:latest
-docker run -it --rm --name h1910541/2024-h1910541-pdf:latest
+docker run -it --rm --name console h1910541/2024-h1910541-pdf:latest
 ```
 
 * コンテナの中に入った後
