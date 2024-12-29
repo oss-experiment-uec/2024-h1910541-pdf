@@ -79,7 +79,7 @@ The PDF contains 6 words.
 
 **例外**
 
-一応、Wordで作成しpdfにエクスポートした`test_pdf.pdf`も用意している。
+一応、Wordで作成しpdfにエクスポートした`test_pdf.pdf`を用意している。
 こちらで`go run main.go test_pdf.pdf`を実行すると
 
 ```
